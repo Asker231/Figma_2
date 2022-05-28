@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/1c69f4daec.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@1&family=Lato:wght@300&family=Poppins:wght@100&family=Raleway:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 1440px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 0 auto;
+      }
+      header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        padding: 28px 0px;
+        z-index: 1;
+        background: #f2f6f7;
+      }
+      .nav {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+      }
+      .nav > a {
+        text-decoration: none;
+        color: #00486d;
+        font-size: 19px;
+        font-family: "DM Sans";
+      }
+      .contacts {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+      }
+      .contacts > a:nth-child(1) {
+        text-decoration: none;
+        color: #00486d;
+        font-size: 19px;
+        font-family: "DM Sans";
+      }
+      .contacts > .btn {
+        text-decoration: none;
+        color: #fff;
+        padding: 12px 24px;
+        background-color: #00486d;
+        border-radius: 4px;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .block1 {
+        display: grid;
+        grid-template-columns: 864px 576px;
+        grid-template-rows: 753px;
+        position: relative;
+      }
+      .left_sec {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #e4ecf0;
+        padding: 155px 85px;
+      }
+      .left_sec > h1 {
+        color: #00486d;
+        font-size: 55px;
+        font-family: "DM Serif Text";
+        font-weight: 400;
+      }
+      .left_sec > p {
+        font-size: 24px;
+        color: #00486d;
+        padding-top: 20px;
+      }
+      .right_sec {
+        background-color: #00486d;
+      }
+      .left_sec > .btn {
+        text-decoration: none;
+        color: #fff;
+        padding: 12px 24px;
+        background-color: #00486d;
+        border-radius: 4px;
+      }
+      .bublse {
+        position: absolute;
+        top: -155px;
+        left: 20px;
+      }
+      .img_first_sec {
+        position: absolute;
+        top: 56px;
+        right: 85px;
+        z-index: 23;
+        transition: 0.6s;
+      }
+      .img_first_sec:hover {
+        top: 62px;
+        right: 92px;
+        cursor: pointer;
+      }
+      .buble2 {
+        position: absolute;
+        top: 616px;
+        left: 717px;
+        z-index: 20;
+      }
+      .block2 {
+        perspective: 900px;
+        position: relative;
+        width: 100%;
+        display: grid;
+        padding: 155px 85px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 51px;
+        background-color: #fafafa;
+      }
+      .titles {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        height: 138px;
+        padding-left: 90px;
+      }
+      .titles > h1 {
+        color: #00486d;
+        font-size: 44px;
+        font-family: "DM Serif Text";
+      }
+      .titles > p {
+        color: #00486d;
+        font-size: 24px;
+      }
+      .card > a > i {
+        font-size: 60px;
+        color: #00486d;
+      }
+      .card {
+        padding: 44px 33px;
+        color: #00486d;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0px 24px 24px rgba(0, 72, 109, 0.2);
+        border-radius: 2px;
+        background-color: #fff;
+        gap: 38px;
+        cursor: pointer;
+        position: relative;
+        transition: 0.3s;
+      }
+      .card:hover {
+        background: linear-gradient(125deg, rgb(34, 211, 239), #fff);
+      }
+      .card > h2 {
+        font-size: 22px;
+      }
+      .card > p {
+        font-size: 20px;
+      }
+      .block2 > .cards_block1 {
+        display: flex;
+        gap: 40px;
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+      }
+      #btn {
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        gap: 9px;
+        color: #00486d;
+      }
+      #btn > i {
+        font-size: 16px;
+      }
+
+      .block3 {
+        display: grid;
+        grid-template-columns: 1270px 65px;
+        padding-left: 85px;
+        grid-template-rows: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #fafafa;
+        position: relative;
+        overflow: hidden;
+      }
+      .block_3_image {
+        position: relative;
+        width: 100%;
+      }
+      .buble_block_3 {
+        position: absolute;
+        right: 20px;
+        top: 188px;
+        z-index: 2;
+      }
+      .block3_info {
+        top: 241px;
+        right: 78px;
+        position: absolute;
+        background-color: #00486d;
+        gap: 23px;
+        display: flex;
+        flex-direction: column;
+        padding: 101px 46px;
+        z-index: 3;
+      }
+      .block3_info > h2 {
+        font-size: 35px;
+        color: #fff;
+      }
+      .block3_info > p {
+        font-size: 19px;
+        color: #fff;
+      }
+      .block3_btn {
+        padding: 12px 24px;
+        background-color: #f2f6f7;
+        border-radius: 4px;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        transition: 0.5s;
+      }
+      .block3_btn:hover {
+        background-color: aqua;
+      }
+      #right > img {
+        transform: rotate(536deg);
+      }
+      .block4 {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 85px;
+        justify-content: center;
+        padding: 85px;
+      }
+      .block4 > .slider {
+        width: 900px;
+        height: 620px;
+        display: flex;
+        flex-direction: row;
+        transition: 0.6s;
+        overflow: hidden;
+      }
+      .slides > img {
+        transition: 0.6s;
+        width: 900px;
+        height: 620px;
+        z-index: 0;
+      }
+      .slides {
+        z-index: -20;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        max-width: 3600px;
+        height: 620px;
+      }
+      .block4 > button {
+        cursor: pointer;
+        position: absolute;
+        width: 36px;
+        border-radius: none;
+        border: none;
+        background: none;
+      }
+      #left {
+        z-index: 70px;
+        top: 374px;
+        left: 85px;
+      }
+      .left__btn {
+        width: 50px;
+        height: auto;
+        position: absolute;
+        transition: 0.5s;
+      }
+      .right__btn {
+        width: 50px;
+        height: auto;
+        position: absolute;
+        transition: 0.5s;
+      }
+
+      #right {
+        top: 374px;
+        right: 85px;
+      }
+      .block5 {
+        display: flex;
+        flex-direction: row;
+        gap: 42px;
+        padding: 269px 86px;
+        justify-content: center;
+        position: relative;
+        background-color: #fafafa;
+      }
+      #title {
+        font-size: 45px;
+        color: #00486d;
+        position: absolute;
+        top: 150px;
+        left: 56px;
+      }
+      .offer__slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .card2 {
+        border-radius: 10px;
+        transition: 3s;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 16px;
+        color: #00486d;
+        background: #ffffff;
+        border: 1px solid #e4ecf0;
+        box-shadow: 0px 24px 24px rgba(0, 72, 109, 0.2);
+
+        padding: 10px;
+        cursor: pointer;
+      }
+      .card2:hover {
+        background: linear-gradient(125deg, rgb(119, 121, 122), #fff);
+      }
+      .card2 > img {
+        width: 395px;
+        height: 260px;
+      }
+      .card2 > h2 {
+        font-size: 15px;
+      }
+      .card2 > h1 {
+        font-size: 22px;
+      }
+      .block6 {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 19px;
+        background-color: #e4ecf0;
+        padding: 155px 418px;
+      }
+      .block6 > h1 {
+        font-size: 44px;
+        color: #00486d;
+      }
+      .block6 > h2 {
+        font-family: "DM Sans";
+        font-size: 21px;
+        color: #00486d;
+      }
+      .block6 > a {
+        text-decoration: none;
+        font-size: 19px;
+        border-radius: 4px;
+        text-align: center;
+        padding: 11px 24px;
+        color: #fff;
+        background-color: #00486d;
+      }
+      footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 330px);
+        background-color: #00486d;
+        position: relative;
+      }
+      .column_1 > h1 {
+        color: #fff;
+        font-size: 38px;
+      }
+      .column_2 > h1 {
+        color: #fff;
+        font-size: 22px;
+      }
+      .fot_1 {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 720px);
+        grid-template-rows: auto;
+        padding-top: 123px;
+      }
+      .column_1 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-left: 86px;
+        gap: 40px;
+      }
+      .fsec_1 {
+        position: relative;
+        color: #d5d9db;
+        font-size: 19px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .fsec_1 > a {
+        color: #e4ecf0;
+      }
+      .column_2 {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+      }
+      .column_2 > input {
+        padding: 15px 23px;
+        width: 397px;
+        background-color: #99b6c5;
+        color: black;
+        border-radius: 2px;
+        font-size: 15px;
+        outline: none;
+        border: none;
+      }
+
+      .fot_2 {
+        position: relative;
+        gap: 10px;
+        display: flex;
+        padding-top: 88px;
+        padding-left: 85px;
+        flex-direction: column;
+      }
+      .fot_2 > a {
+        text-decoration: none;
+        color: #99b6c5;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      #b {
+        position: absolute;
+        top: 227px;
+        right: 326px;
+        cursor: pointer;
+      }
+      .wrapper {
+        width: 70%;
+        margin-top: 15px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <img
+          src="./assets/Logo.svg"
+          width="130px"
+          height="30px"
+          alt=""
+          class="logo"
+        />
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Articles</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="contacts">
+        <a href="#">(123) 456-7890</a>
+        <a href="#" class="btn">Request Consultation</a>
+      </div>
+    </header>
+    <section>
+      <div class="block1">
+        <div class="left_sec">
+          <h1>
+            Corporate Legal<br />
+            Representation
+          </h1>
+          <p>
+            We understand the difficulties and stress that your<br />
+            legal issues bring. Our team is committed to<br />
+            providing you with the individual attention,<br />
+            communication, and dedication you deserve.
+          </p>
+          <a href="#" class="btn">Request Consultation</a>
+        </div>
+        <div class="right_sec"></div>
+        <img
+          src="./assets/HEADER_DOT.svg"
+          width="208px"
+          height="208px"
+          class="bublse"
+        />
+        <img
+          src="./assets/FIRST_SECTION_IMAGE.png"
+          width="595px"
+          height="753px"
+          class="img_first_sec"
+          alt=""
+        />
+        <img src="./assets/FIRST_SECTION.svg" class="buble2" alt="" />
+      </div>
+      <div class="block2">
+        <div class="titles">
+          <h1>Areas of Practic</h1>
+          <p>
+            Our disciplined approach to resolving your legal issues<br />
+            will produce the best-possible outcome.
+          </p>
+        </div>
+        <div class="cards_block1">
+          <div class="card">
+            <a href="#"><i class="fa-solid fa-globe"></i></a>
+            <h2>Intellectual Property</h2>
+            <p>
+              Intellectual Property law deals with<br />
+              laws to protect creators and<br />
+              owners of inventions, writing,<br />
+              music, designs and other works.
+            </p>
+            <a id="btn" href=""
+              >Learn more <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="card">
+            <a href="#"><i class="fa-solid fa-building"></i></a>
+            <h2>Real Estate</h2>
+            <p>
+              Real estate law is a branch of<br />
+              civil law that covers the right to<br />
+              possess, use, and enjoy land.
+            </p>
+            <a id="btn" href=""
+              >Learn more <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="card">
+            <a href="#"><i class="fa-solid fa-book-open"></i></a>
+            <h2>Tax Law</h2>
+            <p>
+              Tax law cover income, corporate,<br />
+              excise, luxury, estate and<br />
+              property taxes, to name a few.
+            </p>
+            <a id="btn" href=""
+              >Learn more <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="block3">
+        <img
+          class="block_3_image"
+          src="./assets/NEXT_SECTION_IMAGE.png"
+          alt=""
+        />
+        <div class="block3_info">
+          <h2>
+            Personalized<br />
+            Legal Services
+          </h2>
+
+          <p>
+            One size does not fit all when it<br />
+            comes to your legal needs. We<br />
+            craft a team and strategy specific<br />
+            to your desired outcome.
+          </p>
+
+          <a class="block3_btn" href="#">About Our Firm</a>
+        </div>
+        <div class="block__3"></div>
+        <img src="./assets/HEADER_DOT.svg" alt="" class="buble_block_3" />
+      </div>
+      <div class="block4">
+        <button id="left">
+          <img class="left__btn" src="./assets/LEFT_BUTTON.svg" alt="" />
+        </button>
+        <div class="wrapper">
+          <div class="slider">
+            <div class="slides">
+              <img
+                class="offer__slide"
+                src="./assets/111Vila_Kavran_Senjak_Studio_OBE_foto_Relja_Ivanic_MG_9304.jpeg"
+                alt=""
+              />
+              <img
+                class="offer__slide"
+                src="./assets/Unknown1111.jpeg"
+                alt=""
+              />
+              <img class="offer__slide" src="./assets/images111.jpeg" alt="" />
+              <img
+                class="offer__slide"
+                src="./assets/home1-banner-2020-02-min.jpeg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <button id="right">
+          <img class="right__btn" src="./assets/LEFT_BUTTON.svg" alt="" />
+        </button>
+      </div>
+
+      <div class="block5">
+        <h1 id="title">Recent Articles</h1>
+        <div class="card2">
+          <img src="./assets/CARD_ONE_IMAGE.png" alt="" />
+          <h2>December 13,2020</h2>
+          <h1>
+            12 Things About Web Design<br />
+            Your Boss Wants To Know
+          </h1>
+          <a id="btn" href=""
+            >Learn more <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="card2">
+          <img src="./assets/CARD_TWO_IMAGE.png" alt="" />
+          <h2>December 10, 2020</h2>
+          <h1>The History Of Web Design</h1>
+          <a id="btn" href=""
+            >Learn more <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="card2">
+          <img src="./assets/CARD_TREE_IMAGE.png" alt="" />
+          <h2>December 10, 2020</h2>
+          <h1>
+            How to improve Web Design<br />
+            Process
+          </h1>
+          <a id="btn" href=""
+            >Learn more <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+      <div class="block6">
+        <h1>Need Profesional legal advice?</h1>
+        <h1>Get a free consultation with our legal experts</h1>
+        <a href="#">Request Consultation</a>
+      </div>
+    </section>
+    <footer>
+      <div class="fot_1">
+        <div class="column_1">
+          <h1>McKinley</h1>
+          <div class="fsec_1">
+            <h2>2972 Westheimer Road</h2>
+            <h2>Denver, CO 80021</h2>
+            <h2>(720) 555-0123</h2>
+            <a href="#">info.denver@mckinley.com</a>
+          </div>
+        </div>
+        <div class="column_2">
+          <h1>
+            Get legal news, advice, and<br />
+            best practices delivered to<br />
+            your inbox.
+          </h1>
+          <input type="text" placeholder="Email Address" />
+
+          <img
+            id="b"
+            src="./assets/IMAGEf.svg"
+            width="40px"
+            height="40px"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="fot_2">
+        <a href="#"><img src="./assets/spc1.svg" alt="" />Facebook</a>
+        <a href="#"><img src="./assets/Vector2.svg" alt="" />LinkedIn</a>
+        <a href="#"><img src="./assets/Vector3.svg" alt="" />Twitter</a>
+      </div>
+    </footer>
+
+    <script>
+      //   //slider
+      //   const prev = document.querySelector('#left');
+      //   const next = document.querySelector('#right');
+      //   const slides = document.querySelector('.slides');
+      //   const images = document.querySelectorAll('.slides>img');
+
+      //   next.addEventListener('click',Pe);
+
+      //   let a = 0;
+
+      //   function Pe() {
+      //       a += 900;
+      //      slides.style.transition = '3s';
+      //           slides.style.left= -a+'px';
+      //      if(slides.style.left == '-3600px')
+      //             slides.style.left = 0 + 'px'
+      //             a+=0;
+
+      //   }
+
+      //  prev.addEventListener('click',()=>{
+      //           slides.style.left ='0px'
+      //           slides.style.transition = '3s';
+      //           //if(slides.style.left ==)
+      //   })
+
+      //test
+
+      const slides = document.querySelectorAll(".offer__slide"),
+        prev = document.querySelector(".left__btn"),
+        next = document.querySelector(".right__btn"),
+        slidesWrapper = document.querySelector(".wrapper"),
+        slidesFiled = document.querySelector(".slides"),
+        width = window.getComputedStyle(slidesWrapper).width;
+
+      let slideIndex = 1;
+      let offset = 0;
+
+      slidesFiled.style.width = 100 * slides.length + "%";
+      slidesFiled.style.display = "flex";
+      slidesFiled.style.transition = "2s all";
+
+      slidesWrapper.style.overflow = "hidden";
+
+      slides.forEach((slide) => {
+        slide.style.width = width;
+      });
+
+      next.addEventListener("click", () => {
+        if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
+          //если нажать вперед, то добавиться 500px и у него вырезаем "px"
+          offset = 0;
+        } else {
+          offset += +width.slice(0, width.length - 2);
+        }
+
+        slidesFiled.style.transform = `translateX(-${offset}px)`;
+
+        if (slideIndex == slides.length) {
+          slideIndex = 1;
+        } else {
+          slideIndex++;
+        }
+      });
+
+      prev.addEventListener("click", () => {
+        if (offset == 0) {
+          offset = +width.slice(0, width.length - 2) * (slides.length - 1);
+        } else {
+          offset -= +width.slice(0, width.length - 2);
+        }
+
+        slidesFiled.style.transform = `translateX(-${offset}px)`;
+
+        if (slideIndex == 1) {
+          slideIndex = slides.length;
+        } else {
+          slideIndex--;
+        }
+      });
+      //test
+    </script>
+  </body>
+</html>
